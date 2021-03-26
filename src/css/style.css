@@ -495,7 +495,6 @@ strong {
   position: relative;
   -webkit-perspective: 500px;
           perspective: 500px;
-  border: 1px solid red;
 }
 
 .card {
@@ -632,6 +631,82 @@ strong {
   }
 }
 
+.background-home {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-home > svg {
+  width: 120%;
+}
+
+@media screen and (max-width: 960px) {
+  .background-home > svg {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .background-home > svg {
+    width: 100%;
+  }
+}
+
+.bg-home-rect1 {
+  -webkit-animation: background-hero 6s ease infinite alternate;
+          animation: background-hero 6s ease infinite alternate;
+}
+
+.bg-home-rect2 {
+  -webkit-animation: background-hero 6s ease .5s infinite alternate;
+          animation: background-hero 6s ease .5s infinite alternate;
+}
+
+.bg-home-rect3 {
+  -webkit-animation: background-hero 6s ease 1s infinite alternate;
+          animation: background-hero 6s ease 1s infinite alternate;
+}
+
+.bg-home-rect4 {
+  -webkit-animation: background-hero 6s ease 1.5s infinite alternate;
+          animation: background-hero 6s ease 1.5s infinite alternate;
+}
+
+.bg-home-blur1 {
+  -webkit-transform: translate3d(0, -100px, 0);
+          transform: translate3d(0, -100px, 0);
+}
+
+.bg-home-blur1 {
+  -webkit-transform: translate3d(0, -150px, 0);
+          transform: translate3d(0, -150px, 0);
+}
+
+@-webkit-keyframes background-hero {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+}
+
+@keyframes background-hero {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+}
+
 header {
   width: 100%;
   height: 4rem;
@@ -733,6 +808,20 @@ header .header-desktop .header-right .links .link-3 .dropdown-links {
   transition: all .5s ease;
   left: 0;
   top: 120%;
+}
+
+header .header-desktop .header-right .links .link-1 .dropdown-links::before,
+header .header-desktop .header-right .links .link-2 .dropdown-links::before,
+header .header-desktop .header-right .links .link-3 .dropdown-links::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fefbff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-22px) rotate3d(0, 0, 1, 45deg);
+          transform: translateY(-22px) rotate3d(0, 0, 1, 45deg);
 }
 
 header .header-desktop .header-right .links .link-1 .dropdown-links .dropdown-link a,
@@ -1089,6 +1178,7 @@ html, body {
 body {
   width: 100%;
   height: 100vh;
+  background-color: #edeaef;
 }
 
 svg, img {

@@ -82,6 +82,15 @@ header {
                         left: 0;
                         top: 120%;
 
+                        &::before{
+                            content: '';
+                            width: 20px;
+                            height: 20px;
+                            background-color: $white-light;
+                            display: flex;
+                            transform: translateY(-22px) rotate3d(0, 0, 1, 45deg);
+                        }
+
                         .dropdown-link {
                             a {
                                 width: 100%;

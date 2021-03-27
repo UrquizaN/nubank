@@ -162,3 +162,38 @@ $container-small: 540px;
         transform: translateY(-50%);
     }
 }
+
+.why-nubank {
+    background-color: $white-normal;
+
+    border-radius: 50px;
+
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 122px;
+        height: 31px;
+        background-image: url('../svg/entail.svg');
+        background-repeat: no-repeat;
+    }
+
+    @include responsive(small){
+        flex-direction: column;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 8px 0;
+
+    @include responsive(small){
+        align-items: center;
+    }
+}
